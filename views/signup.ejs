@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,11 +13,143 @@
         <% }) %>    
     <% } %>
     <form action="/signup" method="POST">
+        <select name="userType" id="">
+            <option value="student">Student</option>
+            <option value="tutor">Tutor</option>
+            <option value="teacher">Teacher</option>
+            <option value="parent">Parent</option>
+        </select>
         <input type="text" name="userName" placeholder="User Name">
+        <input type="text" name="firstName" placeholder="First Name">
+        <input type="text" name="lastName" placeholder="Last Name">
+        <input type="text" name="grade" placeholder="Grade">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
         <input type="submit">
     </form>
 </body>
+</html> -->
+
+
+
+<!-- Orginal Signup Form Above -->
+
+
+
+
+
+
+
+
+
+
+<!-- New Signup Form Below -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/signupTwo.css">
+    <title>Document</title>
+</head>
+<body>
+    <% if (locals.messages.errors) { %>
+        <% messages.errors.forEach( el => { %>
+            <div class="alert alert-danger"><%= el.msg %></div>
+        <% }) %>    
+    <% } %>
+
+
+
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Create your account</h3>
+                        <p>Fill in the data below.</p>
+                        <form action="/signup" method="POST" class="requires-validation" novalidate>
+
+                            <div class="col-md-12"> 
+                                <!-- <h4>Username</h4> -->
+                               <input class="form-control" type="text" name="userName" placeholder="UserName" required>
+                               <input class="form-control" type="text" name="firstName" placeholder="First Name" required>
+                               <input class="form-control" type="text" name="lastName" placeholder="Last Name" required>
+                               <input class="form-control" type="text" name="grade" placeholder="Grade" required>
+                               <!-- <div class="valid-feedback">Username field is valid!</div> -->
+                               <!-- <div class="invalid-feedback">Username field cannot be blank!</div> -->
+                               
+                            </div>
+
+                            <div class="col-md-12">
+                                <!-- Email Address -->
+                                <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                                 <!-- <div class="valid-feedback">Email field is valid!</div> -->
+                                 <!-- <div class="invalid-feedback">Email field cannot be blank!</div> -->
+                            </div>
+
+                           <div class="col-md-12">
+                            <select name="userType" id="">
+                                <option value="student">Select User Type</option>
+                                <option value="student">Student</option>
+                                <option value="tutor">Tutor</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="parent">Parent</option>
+                            </select>
+                            <select name="gender" id="">
+                                <option value="student">Select Gender</option>
+                                <option value="student">Male</option>
+                                <option value="tutor">Female</option>
+                                <option value="teacher">Other</option>
+                            </select>
+                                <!-- <div class="valid-feedback">You selected a position!</div> -->
+                                <!-- <div class="invalid-feedback">Please select a position!</div> -->
+                           </div>
+
+
+                           <div class="col-md-12">
+                              <input class="form-control" type="password" name="password" placeholder="Password" required>
+                              <input class="form-control" type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                               <!-- <div class="valid-feedback">Password field is valid!</div> -->
+                               <!-- <div class="invalid-feedback">Password field cannot be blank!</div> -->
+                           </div>
+
+
+                            <div class="col-md-12 mt-3">
+                            <label class="mb-3 mr-1" for="gender">Gender: </label>
+
+                            <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
+                            <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+
+                            <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
+                            <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+
+                            <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off" required>
+                            <label class="btn btn-sm btn-outline-secondary" for="secret">Other</label>
+                               <!-- <div class="valid-feedback mv-up">You selected a gender!</div> -->
+                                <!-- <div class="invalid-feedback mv-up">Please select a gender!</div> -->
+                            <!-- </div> -->
+
+                        <!-- <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label">I confirm that all data are correct</label> -->
+                         <!-- <div class="invalid-feedback">Please confirm that the entered data are all correct!</div> -->
+                        <!-- </div> -->
+                  
+
+                            <div class="form-button mt-3">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/signupTwo.js"></script>
+</body>
 </html>
+ 

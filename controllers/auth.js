@@ -4,7 +4,8 @@ const User = require('../models/User')
 
  exports.getLogin = (req, res) => {
     if (req.user) {
-      return res.redirect('/todos')
+      // return res.redirect('/todos')
+      return res.redirect('/admin')
     }
     res.render('login', {
       title: 'Login'
@@ -28,10 +29,30 @@ const User = require('../models/User')
         req.flash('errors', info)
         return res.redirect('/login')
       }
+
+      //login function for all users: (students, teachers, tutors, admins)
+
       req.logIn(user, (err) => {
         if (err) { return next(err) }
         req.flash('success', { msg: 'Success! You are logged in.' })
-        res.redirect(req.session.returnTo || '/todos')
+        if(user.userType === 'admin'){
+
+          res.redirect('/admin')
+        }else if(user.userType === 'student'){
+
+          res.redirect('/studentprofile')
+        
+        }else if(user.userType === 'teacher'){
+
+          res.redirect('/teacherprofile')
+
+        }else if(user.userType === 'tutor'){
+
+          res.redirect('/tutorprofile')
+        
+        }else{
+          res.redirect(req.session.returnTo || '/')
+        }
       })
     })(req, res, next)
   }
@@ -49,7 +70,8 @@ const User = require('../models/User')
   
   exports.getSignup = (req, res) => {
     if (req.user) {
-      return res.redirect('/todos')
+      // return res.redirect('/todos')
+      return res.redirect('/admin')
     }
     res.render('signup', {
       title: 'Create Account'
@@ -71,7 +93,10 @@ const User = require('../models/User')
     const user = new User({
       userName: req.body.userName,
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      userType: req.body.userType,
+      grade: req.body.grade,
+      gender: req.body.gender
     })
   
     User.findOne({$or: [
@@ -89,7 +114,8 @@ const User = require('../models/User')
           if (err) {
             return next(err)
           }
-          res.redirect('/todos')
+          // res.redirect('/todos')
+          res.redirect('/admin')
         })
       })
     })
