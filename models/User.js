@@ -1,12 +1,14 @@
 const bcrypt = require('bcrypt')
+const { ObjectId } = require('mongodb')
 const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
   userType: String,
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
-  grade: { type: String, unique: true },
-  password: String
+  grade: { type: String },
+  password: String,
+  classes: [{type: ObjectId}]
 })
 
 

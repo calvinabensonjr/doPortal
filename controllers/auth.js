@@ -1,6 +1,8 @@
+const { ObjectId } = require('mongodb')
 const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
+const Clss = require('../models/Clss')
 
  exports.getLogin = (req, res) => {
     if (req.user) {
@@ -34,7 +36,7 @@ const User = require('../models/User')
 
       req.logIn(user, (err) => {
         if (err) { return next(err) }
-        req.flash('success', { msg: 'Success! You are logged in.' })
+        // req.flash('success', { msg: 'Success! You are logged in.' })
         if(user.userType === 'admin'){
 
           res.redirect('/admin')
@@ -96,9 +98,49 @@ const User = require('../models/User')
       password: req.body.password,
       userType: req.body.userType,
       grade: req.body.grade,
-      gender: req.body.gender
+      gender: req.body.gender,
+      classes: [{type: ObjectId}]
+      // classes: {Array: 0},
     })
+
+    // const clss = new Clss({
+    //   name: String,
+    //   department: String,
+    //   grade: String,
+    //   teacher: [{type: ObjectId}]
+    // })
+    
   
+
+    // const classitems = new classitems({
+    //   name: req.body.name,
+    //   department: req.body.department,
+    //   grade: req.body.grade,
+    //   teacher: []
+      
+    // })
+
+    //db collection
+
+    // const classItems = async db.collection('classes').insertMany([
+    //   {
+    //     item: 'journal',
+    //     qty: 25,
+    //     tags: ['blank', 'red'],
+    //     dim_cm: [14, 21]
+    //   }
+      
+    // ]);
+
+
+
+
+
+
+
+
+
+
     User.findOne({$or: [
       {email: req.body.email},
       {userName: req.body.userName}
@@ -114,8 +156,24 @@ const User = require('../models/User')
           if (err) {
             return next(err)
           }
-          // res.redirect('/todos')
-          res.redirect('/admin')
+          if(user.userType === 'admin'){
+
+            res.redirect('/admin')
+          }else if(user.userType === 'student'){
+  
+            res.redirect('/studentprofile')
+          
+          }else if(user.userType === 'teacher'){
+  
+            res.redirect('/teacherprofile')
+  
+          }else if(user.userType === 'tutor'){
+  
+            res.redirect('/tutorprofile')
+          
+          }else{
+            res.redirect(req.session.returnTo || '/')
+          }
         })
       })
     })

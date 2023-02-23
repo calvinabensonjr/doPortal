@@ -1,5 +1,14 @@
 const User = require('../models/User')
+const Clss = require('../models/Clss')
 const mongoose = require('mongoose');
+
+
+async function getClass(objectId){
+    const clss = await Clss.findOne({_id:objectId})
+    return clss
+}
+
+console.log('class function', getClass(mongoose.Types.ObjectId('63d03bedbf91091227b92eac')))
 
 module.exports = {
     getAbout: (req, res) => {
@@ -66,7 +75,7 @@ module.exports = {
     },
 
     getShowOneUser: async (req,res)=>{
-        
+    
         console.log('url Id',req.query.id)
         try{
 
@@ -74,11 +83,14 @@ module.exports = {
             const user = await User.findOne({_id: mongoose.Types.ObjectId(req.query.id)})
             console.log('found user', user)
             
-            res.render('showoneuser.ejs', {showuser:user})
+            const clss = await getClass(user.classes[0])
+            console.log('found class', clss, 'using', user.classes[0])
+            res.render('showoneuser.ejs', {showuser:user, clss})
           
             console.log(req.query.id)
         }catch(err){
             console.log(err)
         }
     },
+
 }
