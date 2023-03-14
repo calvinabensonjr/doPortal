@@ -99,16 +99,11 @@ const Clss = require('../models/Clss')
       userType: req.body.userType,
       grade: req.body.grade,
       gender: req.body.gender,
-      classes: [{type: ObjectId}]
+      classes: []
       // classes: {Array: 0},
     })
 
-    // const clss = new Clss({
-    //   name: String,
-    //   department: String,
-    //   grade: String,
-    //   teacher: [{type: ObjectId}]
-    // })
+    
     
   
 

@@ -13,8 +13,37 @@
     <h3>Email: <%= showuser.email %></h3>
     <h3>Grade: <%= showuser.grade %></h3>
     <h3>UserType: <%= showuser.userType %></h3>
-    <h3>Classes: <%= showuser.classes %></h3>
-   
+    <ul>Classes: 
+       <% for(let i = 0; i < clss.length; i++){ %>
+       <li> Subject: <%= clss[i].name %>, </li> 
+       <li> Department: <%= clss[i].department %>, </li> 
+       <li> Grade: <%= clss[i].grade %> | </li> 
+       <li> Teacher: <%= clss[i].teacherName %> | </li>
+        <!--Do I need a teacherSchema for this? ^  -->
+        <!-- or to convert the objectId into a string? -->
+        <!-- Or create a separate loop?   -->
+        <!-- Teacher is attached to usertype, in the UserSchema. -->
+       <% } %>
+       </ul>
+
+<form action="/addClasses" method="POST" class="" novalidate>
+
+    <ul class="checkOffClass">Classes: 
+       <% for(let i = 0; i < clss.length; i++){ %>
+       <input type="checkbox" name="<%= clss[i]._id %>"><li> Subject: <%= clss[i].name %>, </li> 
+       <li> Department: <%= clss[i].department %>, </li> 
+       <li> Grade: <%= clss[i].grade %> | </li> 
+       <li> Teacher: <%= clss[i].teacherName %> | </li>
+       <% } %>
+       <input type="hidden" name="studentId" value="<%=showuser._id %>">
+       <input type="submit"> Update Classes </input>
+       </ul>
+    </form>
+   <!-- Need to move up. So that it's directly across,   -->
+   <!-- from the cloned classes above -->
+
+
+
 
     <a href="/logout">Logout</a>
     <a href="/admin">Admin</a>

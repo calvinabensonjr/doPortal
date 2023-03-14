@@ -33,6 +33,10 @@ router.get('/tutorprofile', generalController.getTutorProfile)
 console.log(generalController.getStudentProfile)
 // router.get('/admin/todos?id=<%=user._id%>', generalController.getAdminStudent)
 
+
+//Class paths
+router.post('/addClasses', generalController.addClasses)
+
 module.exports = router
 
 

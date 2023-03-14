@@ -13,7 +13,16 @@
     <h3>Email: <%= user.email %></h3>
     <h3>Grade: <%= user.grade %></h3>
     <h3>UserType: <%= user.userType %></h3>
-    <h3>Classes: <%= user.classes %></h3>
+    <h3>Classes: 
+        <% for(let i = 0; i < clss.length; i++){ %>
+       <span> Subject: <%= clss[i].name %>, </span> 
+       <span> Department: <%= clss[i].department %>, </span> 
+       <span> Grade: <%= clss[i].grade %> | </span> 
+       <!-- this doesn;t work for student profile -->
+       <!-- schema issue? or variable creation needed in general.js? -->
+       <% } %>
+       
+    </h3>
 
     <a href="/"><h3>Home</h3></a>
     <a href="/logout"><h3>Logout</h3></a>
