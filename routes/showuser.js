@@ -6,7 +6,7 @@ const showuserController = require('../controllers/showuser')
 const { ensureAuth } = require('../middleware/auth')
 
 // router.get('/', ensureAuth, todosController.getTodos)
-router.get('/showoneuser', ensureAuth, showuserController.getShowUser)
+// router.get('/showoneuser', ensureAuth, showuserController.getShowUser)
 
 // router.post('/createTodo', todosController.createTodo)
 // router.post('/createTodo', showuserController.createTodo)

@@ -9,7 +9,7 @@ const logger = require('morgan')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
 // const todoRoutes = require('./routes/todos')
-const showUserRoutes = require('./routes/showuser')
+// const showUserRoutes = require('./routes/showuser')
 // const adminRoutes = require('./routes/admin')
 
 require('dotenv').config({path: './config/.env'})
@@ -42,7 +42,7 @@ app.use(flash())
   // Main Route
 app.use('/', mainRoutes)
 // app.use('/todos', todoRoutes)
-app.use('/showuser', showUserRoutes)
+// app.use('/showuser', showUserRoutes)
 // app.use('/admin', adminRoutes)
  
 app.listen(process.env.PORT, ()=>{
