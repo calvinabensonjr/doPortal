@@ -16,9 +16,9 @@
     <ul>Classes: 
        <% for(let i = 0; i < clss.length; i++){ %>
        <li> Subject: <%= clss[i].name %>, </li> 
-       <li> Department: <%= clss[i].department %>, </li> 
+       <!-- <li> Department: <%= clss[i].department %>, </li> 
        <li> Grade: <%= clss[i].grade %> | </li> 
-       <li> Teacher: <%= clss[i].teacherName %> | </li>
+       <li> Teacher: <%= clss[i].teacherName %> | </li> -->
         <!--Do I need a teacherSchema for this? ^  -->
         <!-- or to convert the objectId into a string? -->
         <!-- Or create a separate loop?   -->
@@ -26,14 +26,19 @@
        <% } %>
        </ul>
 
+
+
+
+
+       <!-- checkboxes -->
 <form action="/addClasses" method="POST" class="" novalidate>
 
     <ul class="checkOffClass">Classes: 
-       <% for(let i = 0; i < clss.length; i++){ %>
-       <input type="checkbox" name="<%= clss[i]._id %>"><li> Subject: <%= clss[i].name %>, </li> 
-       <li> Department: <%= clss[i].department %>, </li> 
-       <li> Grade: <%= clss[i].grade %> | </li> 
-       <li> Teacher: <%= clss[i].teacherName %> | </li>
+       <% for(let i = 0; i < allClasses.length; i++){ %>
+       <input type="checkbox" name="<%= allClasses[i]._id %>"><li> Subject: <%= allClasses[i].name %>, </li> 
+       <!-- <li> Department: <%= allClasses[i].department %>, </li> 
+       <li> Grade: <%= allClasses[i].grade %> | </li> 
+       <li> Teacher: <%= allClasses[i].teacherName %> | </li> -->
        <% } %>
        <input type="hidden" name="studentId" value="<%=showuser._id %>">
        <input type="submit"> Update Classes </input>

@@ -103,7 +103,9 @@ module.exports = {
     },
 
     getShowOneUser: async (req,res)=>{
-    
+        
+
+        
         console.log('url Id',req.query.id)
         try{
 
@@ -112,8 +114,11 @@ module.exports = {
             console.log('found user', user)
             
             const clss = await getClasses(user.classes)
+            const allClasses = await Clss.find()
             console.log('found class', clss, 'using', user.classes[0])
-            res.render('showoneuser.ejs', {showuser:user, clss})
+
+            res.render('showoneuser.ejs', {showuser:user, clss, allClasses})
+            // res.render('showuser.ejs', {showuser:user, allClasses })
           
             console.log(req.query.id)
         }catch(err){
@@ -122,6 +127,18 @@ module.exports = {
     },
 
     addClasses: async (req,res) =>{
+        const user = await User.findOne({_id: mongoose.Types.ObjectId(req.body.studentId)})
+
+        for (const [key, value] of Object.entries(req.body)) {
+            console.log(`${key}: ${value}`);
+            if(req.body.includes('on')){
+                // something.push(...items: T[])
+            }
+          }
+//conditional
+//push classes into the student
+//what variable holds the classes?
+
 
         console.log("add ,classes", req.body) 
         // loop through all the keys in req.body and push each one, into the student
@@ -131,3 +148,4 @@ module.exports = {
     }
 
 }
+
