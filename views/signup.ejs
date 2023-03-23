@@ -71,19 +71,26 @@
                     <div class="form-items">
                         <h3>Create your account</h3>
                         <p>Fill in the data below.</p>
-                        <form action="/signup" method="POST" class="requires-validation" novalidate>
+                        <form action="/signup" method="POST" class="requires-validation" novalidate enctype="multipart/form-data">
 
                             <div class="col-md-12"> 
                                 <!-- <h4>Username</h4> -->
                                <input class="form-control" type="text" name="userName" placeholder="UserName" required>
-                               <input class="form-control" type="text" name="firstName" placeholder="First Name" required>
-                               <input class="form-control" type="text" name="lastName" placeholder="Last Name" required>
+                               <input class="form-control" type="text" name="firstName" placeholder="firstName" required>
+                               <input class="form-control" type="text" name="lastName" placeholder="lastName" required>
                                <input class="form-control" type="text" name="grade" placeholder="Grade" required>
                                <!-- <div class="valid-feedback">Username field is valid!</div> -->
                                <!-- <div class="invalid-feedback">Username field cannot be blank!</div> -->
                                
                             </div>
 
+                            <!-- image upload -->
+                            <div>
+                                <label for="image">Upload Image</label>
+                                <input type="file" id="image"
+                                       name="image" value="" required>
+                            </div>
+                            
                             <div class="col-md-12">
                                 <!-- Email Address -->
                                 <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>

@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
     Hello Student!
 
     <h3>UserName: <%= user.userName %></h3>
+    <h3>First Name: <%= user.firstName %></h3>
+    <h3>Last Name: <%= user.lastName %></h3>
     <h3>Email: <%= user.email %></h3>
     <h3>Grade: <%= user.grade %></h3>
     <h3>UserType: <%= user.userType %></h3>
     <h3>Classes: 
         <% for(let i = 0; i < clss.length; i++){ %>
-       <span> Subject: <%= clss[i].name %>, </span> 
+            <ul class="currClass">
+                <li>Subject: <%= clss[i].name %>,</li>
+            </ul>
+       <!-- <span> Subject: <%= clss[i].name %>, </span> 
        <span> Department: <%= clss[i].department %>, </span> 
-       <span> Grade: <%= clss[i].grade %> | </span> 
+       <span> Grade: <%= clss[i].grade %> | </span>  -->
        <!-- this doesn;t work for student profile -->
        <!-- schema issue? or variable creation needed in general.js? -->
        <% } %>
        
+       <!-- ColorLib -->
+       <!-- looking for a template to hold the user's class and make it look more appealing -->
+       <!-- checkout Colorlib table #2 -->
+       <!-- use responsive tables? To show user data on admin side? Maybe -->
+       <!-- checkout #22, Table V17 -->
+
     </h3>
 
     <a href="/"><h3>Home</h3></a>

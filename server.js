@@ -8,6 +8,7 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const connectDB = require('./config/database')
 const mainRoutes = require('./routes/main')
+var bodyParser = require('body-parser');
 // const todoRoutes = require('./routes/todos')
 // const showUserRoutes = require('./routes/showuser')
 // const adminRoutes = require('./routes/admin')
@@ -24,6 +25,11 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
+
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+//adds it to the app, so it can decode the form
+
 // Sessions
 app.use(
     session({

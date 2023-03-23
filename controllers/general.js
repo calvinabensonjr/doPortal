@@ -128,16 +128,28 @@ module.exports = {
 
     addClasses: async (req,res) =>{
         const user = await User.findOne({_id: mongoose.Types.ObjectId(req.body.studentId)})
-
+        user.classes = []
+        // const clss = await getClasses(user.classes)
+       
+        // object for loop to place student into checked off classes
+        // const placeClass = []
+        //hmm, wouldn't I just place the classes into the clss variable? Because it's linked to logged in user's classes
         for (const [key, value] of Object.entries(req.body)) {
             console.log(`${key}: ${value}`);
-            if(req.body.includes('on')){
+            if(value === 'on'){
+              user.classes.push(key)
                 // something.push(...items: T[])
             }
+
           }
+
+          user.save()
+          //saves the new classes that were pushed into the user.classes collection
+
 //conditional
 //push classes into the student
 //what variable holds the classes?
+//the 'allClasses' variable has all of the classes
 
 
         console.log("add ,classes", req.body) 

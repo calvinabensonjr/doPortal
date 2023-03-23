@@ -10,10 +10,12 @@
 <body>
    
     <h3>UserName: <%= showuser.userName %></h3>
+    <h3>First Name: <%= showuser.firstName %></h3>
+    <h3>Last Name: <%= showuser.lastName %></h3>
     <h3>Email: <%= showuser.email %></h3>
     <h3>Grade: <%= showuser.grade %></h3>
     <h3>UserType: <%= showuser.userType %></h3>
-    <ul>Classes: 
+    <ul class="currClass">Classes: 
        <% for(let i = 0; i < clss.length; i++){ %>
        <li> Subject: <%= clss[i].name %>, </li> 
        <!-- <li> Department: <%= clss[i].department %>, </li> 
@@ -34,8 +36,13 @@
 <form action="/addClasses" method="POST" class="" novalidate>
 
     <ul class="checkOffClass">Classes: 
-       <% for(let i = 0; i < allClasses.length; i++){ %>
-       <input type="checkbox" name="<%= allClasses[i]._id %>"><li> Subject: <%= allClasses[i].name %>, </li> 
+       <% for(let i = 0; i < allClasses.length; i++){
+        const checked = showuser.classes.find(id => id.toString() === allClasses[i]._id.toString())
+        %>
+       <input type="checkbox" <%=  checked ? 'checked' : '' %>  name="<%= allClasses[i]._id %>"><li> Subject: <%= allClasses[i].name %>, </li> 
+
+       <!-- next step, to be able to update class, without having to remove the current classes and re-add them -->
+
        <!-- <li> Department: <%= allClasses[i].department %>, </li> 
        <li> Grade: <%= allClasses[i].grade %> | </li> 
        <li> Teacher: <%= allClasses[i].teacherName %> | </li> -->

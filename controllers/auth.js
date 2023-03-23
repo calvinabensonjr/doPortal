@@ -3,6 +3,10 @@ const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
 const Clss = require('../models/Clss')
+var fs = require('fs');
+var path = require('path');
+
+
 
  exports.getLogin = (req, res) => {
     if (req.user) {
@@ -94,12 +98,18 @@ const Clss = require('../models/Clss')
   
     const user = new User({
       userName: req.body.userName,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
       password: req.body.password,
       userType: req.body.userType,
       grade: req.body.grade,
       gender: req.body.gender,
-      classes: []
+      classes: [],
+      img: {
+        data: fs.readFileSync(path.join(__dirname + '/../uploads/' + req.file.filename)),
+        contentType: 'image/png'
+    }
       // classes: {Array: 0},
     })
 

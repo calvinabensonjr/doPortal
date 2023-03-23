@@ -13,3 +13,7 @@ h1{
    float: right; 
    list-style: none;
 }
+
+.currClass{
+    list-style: none;
+}

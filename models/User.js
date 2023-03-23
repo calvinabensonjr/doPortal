@@ -5,11 +5,18 @@ const mongoose = require('mongoose')
 const UserSchema = new mongoose.Schema({
   userType: String,
   userName: { type: String, unique: true },
+  firstName: String,
+  lastName: String,
   email: { type: String, unique: true },
   grade: { type: String },
   password: String,
   classes: [{type: ObjectId}],
-  name: {first: String, last: String}
+  // name: {first: String, last: String},
+  img:
+    {
+        data: Buffer,
+        contentType: String
+    }
 })
 
 
