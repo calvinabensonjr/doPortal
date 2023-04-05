@@ -50,6 +50,16 @@
        <input type="hidden" name="studentId" value="<%=showuser._id %>">
        <input type="submit"> Update Classes </input>
        </ul>
+
+       <div>
+        <img src="data:image/<%=showuser.img.contentType%>;base64,
+             <%=showuser.img.data.toString('base64')%>">
+       </div>
+
+            <!-- <h5> image.name </h5> -->
+            <h5><%= showuser.img %></h5>
+            <!-- change to the name of that corresponds with the user schema, and targets the image -->
+
     </form>
    <!-- Need to move up. So that it's directly across,   -->
    <!-- from the cloned classes above -->
