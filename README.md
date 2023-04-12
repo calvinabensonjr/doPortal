@@ -40,7 +40,7 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 1. Do 'npm install' in terminal
   2. Run 'node server.js'
-  3. Enter 'localhost:2121' into browser 
+  3. Enter 'localhost:2222' into browser 
  ---
  
  <!-- Have fun testing and improving it! 😎 -->

@@ -70,9 +70,15 @@
                 <div class="form-content">
                     <div class="form-items">
                         <h3>Create your account</h3>
-                        <p>Fill in the data below.</p>
+                        <!-- <p>Fill in the data below.</p> -->
                         <form action="/signup" method="POST" class="requires-validation" novalidate enctype="multipart/form-data">
 
+                            <!-- image upload -->
+                            <div>
+                                <label for="image">Upload a Profile Picture (Optional)</label>
+                                <input type="file" id="image"
+                                       name="image" value="" required>
+                            </div>
                             <div class="col-md-12"> 
                                 <!-- <h4>Username</h4> -->
                                <input class="form-control" type="text" name="userName" placeholder="UserName" required>
@@ -84,12 +90,7 @@
                                
                             </div>
 
-                            <!-- image upload -->
-                            <div>
-                                <label for="image">Upload Image</label>
-                                <input type="file" id="image"
-                                       name="image" value="" required>
-                            </div>
+                           
                             
                             <div class="col-md-12">
                                 <!-- Email Address -->
