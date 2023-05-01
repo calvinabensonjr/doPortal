@@ -46,8 +46,8 @@ On the second line type:
 `DB_STRING = mongodb+srv://stutor:stutor@cluster0.scejxne.mongodb.net/?retryWrites=true&w=majority`.
 (This is will connect you to the database)
 3. Open up the terminal, then type `npm install` in the terminal
-  4. Next, type `node server.js` to run the server
-  5. Enter `localhost:2222` into browser, then hit enter 
+  4. Next, type `node server.js` in the terminal, to run the server
+  5. Enter `localhost:2222` into the browser, then hit enter 
  ---
  
  <!-- Have fun testing and improving it! 😎 -->
