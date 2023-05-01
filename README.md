@@ -38,9 +38,15 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 # To run application
 
-1. Do 'npm install' in terminal
-  2. Run 'node server.js'
-  3. Enter 'localhost:2222' into browser 
+
+1. Create an `.env` file in the folder called `config`
+2. Next, type the following in the `.env` file:
+`PORT = 2222`
+`DB_STRING = mongodb+srv://stutor:stutor@cluster0.scejxne.mongodb.net/?retryWrites=true&w=majority`
+(This is will connect you to the database)
+3. Open up the terminal, then type `npm install` in terminal
+  4. Next, type `node server.js` to run the server
+  5. Enter `localhost:2222` into browser, then hit enter 
  ---
  
  <!-- Have fun testing and improving it! 😎 -->
