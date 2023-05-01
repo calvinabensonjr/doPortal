@@ -106,14 +106,15 @@ var path = require('path');
       grade: req.body.grade,
       gender: req.body.gender,
       classes: [],
-      img: {
-        data: fs.readFileSync(path.join(__dirname + '/../uploads/' + req.file.filename)),
-        contentType: 'image/png'
-    }
+      
       // classes: {Array: 0},
     })
 
     
+  //   img: {
+  //     data: fs.readFileSync(path.join(__dirname + '/../uploads/' + req.file.filename)),
+  //     contentType: 'image/png'
+  // }
     
   
 
