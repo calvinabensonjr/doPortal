@@ -41,9 +41,9 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 
 1. Create an `.env` file in the folder called `config`
 2. Next, type the following in the `.env` file:
-On the first line type: `PORT = 2222` __
+On the first line type: `PORT = 2222`.
 On the second line type:
-`DB_STRING = mongodb+srv://stutor:stutor@cluster0.scejxne.mongodb.net/?retryWrites=true&w=majority`__
+`DB_STRING = mongodb+srv://stutor:stutor@cluster0.scejxne.mongodb.net/?retryWrites=true&w=majority`.
 (This is will connect you to the database)
 3. Open up the terminal, then type `npm install` in terminal
   4. Next, type `node server.js` to run the server
