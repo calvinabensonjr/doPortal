@@ -12,7 +12,7 @@ async function getClass(objectId){
 
     // clss.teacherName = 'testTeacherName'
     // clss.teacherName = teacherObject.userName
-    clss.teacherName = teacherObject.name.first + ' ' + teacherObject.name.last
+    // clss.teacherName = teacherObject.name.first + ' ' + teacherObject.name.last
 
     //create more names objects, and in the login form (so I no longer have to manually put them in there)
     // paste list of classes for each student on the opposite side. With checkboxes
