@@ -53,7 +53,7 @@ On the second line type:
   5. Enter `localhost:2222` into the browser, then hit enter 
 
   `User Creation`:
-1. To create a user, simply click sign up , from the nav in the top right corner.
+1. To create a user, simply click `sign up`, from the nav in the top right corner.
 2. Fill out the form.
 3. Hit submit at the bottom of the form.
  ---
