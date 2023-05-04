@@ -39,6 +39,9 @@ bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mon
 # To run application
 
 
+
+
+
 1. Create an `.env` file in the folder called `config`
 2. Next, type the following in the `.env` file:
 On the first line type: `PORT = 2222`.
@@ -48,8 +51,16 @@ On the second line type:
 3. Open up the terminal, then type `npm install` in the terminal
   4. Next, type `node server.js` in the terminal, to run the server
   5. Enter `localhost:2222` into the browser, then hit enter 
+
+  `User Creation`:
+1. To create a user, simply click sign up , from the nav in the top right corner.
+2. Fill out the form.
+3. Hit submit at the bottom of the form.
  ---
  
+
+
+
  <!-- Have fun testing and improving it! 😎 -->
 
 
