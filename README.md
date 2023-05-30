@@ -56,6 +56,12 @@ On the second line type:
 1. To create a user, simply click `sign up`, from the nav in the top right corner.
 2. Fill out the form.
 3. Hit submit at the bottom of the form.
+
+`To access test admin:`
+1. Logout (if you haven’t logged out from previous user yet)
+2. click login,  enter: Username: johnb@gmail.com . Pass: johnjohnb
+3. View the all of the users, select the user you created.
+4. Place the users into the classes you want them to be in
  ---
  
 
