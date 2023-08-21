@@ -5,3 +5,7 @@ h1,h3{
 body{
     background-color: aqua;
 }
+
+ul{
+    list-style: none;
+}
