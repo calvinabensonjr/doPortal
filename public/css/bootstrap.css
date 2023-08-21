@@ -240,7 +240,15 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #c36e07;
+  color: #3e07f0;
+}
+
+.landButtons{
+  color: #fcfbfa;
+}
+
+.landButtons:hover {
+  color: #0d0700;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
