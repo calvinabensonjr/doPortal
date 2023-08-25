@@ -256,6 +256,31 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
+.user{
+  list-style: none;
+}
+
+.showOneUser{
+  color: white;
+}
+
+.showOneUser:hover{
+  color: grey;
+}
+
+
+.currClass, .checkOffClass{
+  list-style: none;
+}
+
+input[type =checkbox] {
+  vertical-align: middle;
+  position: relative;
+  bottom: -28px;
+  left: 110px;
+}
+
+
 pre,
 code,
 kbd,
@@ -11200,6 +11225,8 @@ header.masthead:before {
   background-color: blue;
   opacity: 0.5;
 }
+
+
 header.masthead .page-heading,
 header.masthead .post-heading,
 header.masthead .site-heading {
@@ -11263,6 +11290,227 @@ header.masthead .site-heading .h1 {
     font-size: 1.875rem;
   }
 }
+
+
+
+
+
+
+
+/* mastheadTwo (showoneuser PAGE) */
+
+
+
+header.mastheadTwo {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+}
+header.mastheadTwo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #212529; */
+  background-color: brown;
+  opacity: 0.5;
+}
+
+
+header.mastheadTwo .page-heading,
+header.mastheadTwo .post-heading,
+header.mastheadTwo .site-heading {
+  color: #fff;
+}
+header.mastheadTwo .page-heading,
+header.mastheadTwo .site-heading {
+  text-align: center;
+}
+header.mastheadTwo .page-heading h1, header.mastheadTwo .page-heading .h1,
+header.mastheadTwo .site-heading h1,
+header.mastheadTwo .site-heading .h1 {
+  font-size: 3rem;
+}
+header.mastheadTwo .page-heading .subheading,
+header.mastheadTwo .site-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.mastheadTwo .post-heading h1, header.mastheadTwo .post-heading .h1 {
+  font-size: 2.25rem;
+}
+header.mastheadTwo .post-heading .meta,
+header.mastheadTwo .post-heading .subheading {
+  line-height: 1.1;
+  display: block;
+}
+header.mastheadTwo .post-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.75rem 0 2rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.mastheadTwo .post-heading .meta {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.mastheadTwo .post-heading .meta a {
+  color: #fff;
+}
+@media (min-width: 992px) {
+  header.mastheadTwo {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+  header.mastheadTwo .page-heading h1, header.mastheadTwo .page-heading .h1,
+header.mastheadTwo .site-heading h1,
+header.mastheadTwo .site-heading .h1 {
+    font-size: 5rem;
+  }
+  header.mastheadTwo .post-heading h1, header.mastheadTwo .post-heading .h1 {
+    font-size: 3.5rem;
+  }
+  header.mastheadTwo .post-heading .subheading {
+    font-size: 1.875rem;
+  }
+}
+
+
+
+
+
+/* MASTHEADTWO ENDS */
+
+
+
+
+
+
+
+
+
+
+
+/* MASTHEADTHREE STARTS */
+
+
+header.mastheadThree {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
+  background: no-repeat center center;
+  background-color: #6c757d;
+  background-size: cover;
+  background-attachment: scroll;
+}
+header.mastheadThree:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #212529; */
+  background-color: green;
+  opacity: 0.5;
+}
+
+
+header.mastheadThree .page-heading,
+header.mastheadThree .post-heading,
+header.mastheadThree .site-heading {
+  color: #fff;
+}
+header.mastheadThree .page-heading,
+header.mastheadThree .site-heading {
+  text-align: center;
+}
+header.mastheadThree .page-heading h1, header.mastheadThree .page-heading .h1,
+header.mastheadThree .site-heading h1,
+header.mastheadThree .site-heading .h1 {
+  font-size: 3rem;
+}
+header.mastheadThree .page-heading .subheading,
+header.mastheadThree .site-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin-top: 0.625rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.mastheadThree .post-heading h1, header.mastheadThree .post-heading .h1 {
+  font-size: 2.25rem;
+}
+header.mastheadThree .post-heading .meta,
+header.mastheadThree .post-heading .subheading {
+  line-height: 1.1;
+  display: block;
+}
+header.mastheadThree .post-heading .subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.75rem 0 2rem;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.mastheadThree .post-heading .meta {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
+  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+header.mastheadThree .post-heading .meta a {
+  color: #fff;
+}
+@media (min-width: 992px) {
+  header.mastheadThree {
+    padding-top: 12.5rem;
+    padding-bottom: 12.5rem;
+  }
+  header.mastheadThree .page-heading h1, header.mastheadThree .page-heading .h1,
+header.mastheadThree .site-heading h1,
+header.mastheadThree .site-heading .h1 {
+    font-size: 5rem;
+  }
+  header.mastheadThree .post-heading h1, header.mastheadThree .post-heading .h1 {
+    font-size: 3.5rem;
+  }
+  header.mastheadThree .post-heading .subheading {
+    font-size: 1.875rem;
+  }
+}
+
+
+
+/* MASTHEADTHREE ENDS */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .section-heading {
   font-size: 2.25rem;
