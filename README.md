@@ -4,8 +4,8 @@ A simple student info app is built using the MVC Architecture, with authenticati
 
 ---
 
-![home page](image/doPortalHome.png)
-![login page](image/doPortalLogin.png)
+![home page](image/indexDoPortal.png)
+<!-- ![login page](image/doPortalLogin.png) -->
 
 
 <!-- > Be sure to add that lovely star 😀 and fork it for your own copy
