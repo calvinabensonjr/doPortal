@@ -1,6 +1,6 @@
 # Introduction
 
-A simple student info app is built using the MVC Architecture, with authentication. To access the live site, go to https://doportal.cyclic.app/. For local manipulation, click here to jump to the [run application](#to-run-application) instructions.
+A simple student info app is built using the MVC Architecture, with authentication. To access the live site, go to https://doportal.cyclic.app/. For local manipulation, jump to the [run application](#to-run-application) instructions.
 
 ---
 
