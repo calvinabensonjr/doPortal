@@ -271,6 +271,10 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 
 .currClass, .checkOffClass{
   list-style: none;
+  display: inline;
+  text-align: left;
+  flex: 1;
+  padding: 20px;
 }
 
 input[type =checkbox] {
@@ -292,7 +296,7 @@ samp {
 }
 
 pre {
-  display: block;
+  display: flex;
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
@@ -2218,7 +2222,7 @@ progress {
 }
 
 .form-control {
-  display: block;
+  display: flex;
   width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -2344,7 +2348,7 @@ progress {
 }
 
 .form-control-plaintext {
-  display: block;
+  display: flex;
   width: 100%;
   padding: 0.375rem 0;
   margin-bottom: 0;
@@ -2433,7 +2437,7 @@ textarea.form-control-lg {
 }
 
 .form-select {
-  display: block;
+  display: flex;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   -moz-padding-start: calc(0.75rem - 3px);
@@ -2490,7 +2494,7 @@ textarea.form-control-lg {
 }
 
 .form-check {
-  display: block;
+  display: flex;
   min-height: 1.5rem;
   padding-left: 1.5em;
   margin-bottom: 0.125rem;
@@ -2841,7 +2845,7 @@ textarea.form-control-lg {
 .was-validated :valid ~ .valid-tooltip,
 .is-valid ~ .valid-feedback,
 .is-valid ~ .valid-tooltip {
-  display: block;
+  display: flex;
 }
 
 .was-validated .form-control:valid, .form-control.is-valid {
@@ -2929,7 +2933,7 @@ textarea.form-control-lg {
 .was-validated :invalid ~ .invalid-tooltip,
 .is-invalid ~ .invalid-feedback,
 .is-invalid ~ .invalid-tooltip {
-  display: block;
+  display: flex;
 }
 
 .was-validated .form-control:invalid, .form-control.is-invalid {
@@ -3814,7 +3818,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-item {
-  display: block;
+  display: flex;
   width: 100%;
   padding: 0.25rem 1rem;
   clear: both;
@@ -3841,11 +3845,11 @@ textarea.form-control-lg {
 }
 
 .dropdown-menu.show {
-  display: block;
+  display: flex;
 }
 
 .dropdown-header {
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   margin-bottom: 0;
   font-size: 0.875rem;
@@ -3854,7 +3858,7 @@ textarea.form-control-lg {
 }
 
 .dropdown-item-text {
-  display: block;
+  display: flex;
   padding: 0.25rem 1rem;
   color: #212529;
 }
@@ -3970,7 +3974,7 @@ textarea.form-control-lg {
 }
 
 .nav-link {
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   color: #212529;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -4048,7 +4052,7 @@ textarea.form-control-lg {
   display: none;
 }
 .tab-content > .active {
-  display: block;
+  display: flex;
 }
 
 .navbar {
@@ -4747,7 +4751,7 @@ textarea.form-control-lg {
 
 .page-link {
   position: relative;
-  display: block;
+  display: flex;
   color: #212529;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -5004,7 +5008,7 @@ textarea.form-control-lg {
 
 .list-group-item {
   position: relative;
-  display: block;
+  display: flex;
   padding: 0.5rem 1rem;
   color: #212529;
   background-color: #fff;
@@ -5560,7 +5564,7 @@ textarea.form-control-lg {
 .tooltip {
   position: absolute;
   z-index: 1080;
-  display: block;
+  display: flex;
   margin: 0;
   font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
@@ -5585,7 +5589,7 @@ textarea.form-control-lg {
 }
 .tooltip .tooltip-arrow {
   position: absolute;
-  display: block;
+  display: flex;
   width: 0.8rem;
   height: 0.4rem;
 }
@@ -5661,7 +5665,7 @@ textarea.form-control-lg {
   top: 0;
   left: 0 /* rtl:ignore */;
   z-index: 1070;
-  display: block;
+  display: flex;
   max-width: 276px;
   font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
@@ -5685,13 +5689,13 @@ textarea.form-control-lg {
 }
 .popover .popover-arrow {
   position: absolute;
-  display: block;
+  display: flex;
   width: 1rem;
   height: 0.5rem;
 }
 .popover .popover-arrow::before, .popover .popover-arrow::after {
   position: absolute;
-  display: block;
+  display: flex;
   content: "";
   border-color: transparent;
   border-style: solid;
@@ -5744,7 +5748,7 @@ textarea.form-control-lg {
   position: absolute;
   top: 0;
   left: 50%;
-  display: block;
+  display: flex;
   width: 1rem;
   margin-left: -0.5rem;
   content: "";
@@ -5797,7 +5801,7 @@ textarea.form-control-lg {
   overflow: hidden;
 }
 .carousel-inner::after {
-  display: block;
+  display: flex;
   clear: both;
   content: "";
 }
@@ -5821,7 +5825,7 @@ textarea.form-control-lg {
 .carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
-  display: block;
+  display: flex;
 }
 
 /* rtl:begin:ignore */
@@ -6224,7 +6228,7 @@ textarea.form-control-lg {
   }
 }
 .clearfix::after {
-  display: block;
+  display: flex;
   clear: both;
   content: "";
 }
@@ -6290,7 +6294,7 @@ textarea.form-control-lg {
   width: 100%;
 }
 .ratio::before {
-  display: block;
+  display: flex;
   padding-top: var(--bs-aspect-ratio);
   content: "";
 }
@@ -6514,7 +6518,7 @@ textarea.form-control-lg {
 }
 
 .d-block {
-  display: block !important;
+  display: flex !important;
 }
 
 .d-grid {
@@ -7792,7 +7796,7 @@ textarea.form-control-lg {
   }
 
   .d-sm-block {
-    display: block !important;
+    display: flex !important;
   }
 
   .d-sm-grid {
@@ -8443,7 +8447,7 @@ textarea.form-control-lg {
   }
 
   .d-md-block {
-    display: block !important;
+    display: flex !important;
   }
 
   .d-md-grid {
@@ -9094,7 +9098,7 @@ textarea.form-control-lg {
   }
 
   .d-lg-block {
-    display: block !important;
+    display: flex !important;
   }
 
   .d-lg-grid {
@@ -9745,7 +9749,7 @@ textarea.form-control-lg {
   }
 
   .d-xl-block {
-    display: block !important;
+    display: flex !important;
   }
 
   .d-xl-grid {
@@ -10396,7 +10400,7 @@ textarea.form-control-lg {
   }
 
   .d-xxl-block {
-    display: block !important;
+    display: flex !important;
   }
 
   .d-xxl-grid {
@@ -11052,7 +11056,7 @@ textarea.form-control-lg {
   }
 
   .d-print-block {
-    display: block !important;
+    display: flex !important;
   }
 
   .d-print-grid {
@@ -11246,7 +11250,7 @@ header.masthead .site-heading .subheading {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.1;
-  display: block;
+  display: flex;
   margin-top: 0.625rem;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11256,7 +11260,7 @@ header.masthead .post-heading h1, header.masthead .post-heading .h1 {
 header.masthead .post-heading .meta,
 header.masthead .post-heading .subheading {
   line-height: 1.1;
-  display: block;
+  display: flex;
 }
 header.masthead .post-heading .subheading {
   font-size: 1.5rem;
@@ -11343,7 +11347,7 @@ header.mastheadTwo .site-heading .subheading {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.1;
-  display: block;
+  display: flex;
   margin-top: 0.625rem;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11353,7 +11357,7 @@ header.mastheadTwo .post-heading h1, header.mastheadTwo .post-heading .h1 {
 header.mastheadTwo .post-heading .meta,
 header.mastheadTwo .post-heading .subheading {
   line-height: 1.1;
-  display: block;
+  display: flex;
 }
 header.mastheadTwo .post-heading .subheading {
   font-size: 1.5rem;
@@ -11449,7 +11453,7 @@ header.mastheadThree .site-heading .subheading {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.1;
-  display: block;
+  display: flex;
   margin-top: 0.625rem;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11459,7 +11463,7 @@ header.mastheadThree .post-heading h1, header.mastheadThree .post-heading .h1 {
 header.mastheadThree .post-heading .meta,
 header.mastheadThree .post-heading .subheading {
   line-height: 1.1;
-  display: block;
+  display: flex;
 }
 header.mastheadThree .post-heading .subheading {
   font-size: 1.5rem;
@@ -11534,6 +11538,38 @@ header.mastheadStudent:before {
 }
 
 
+/* student profile & showuser styling */
+
+.textItems{
+  display: inline;
+  text-align: left;
+  flex: 1;
+  padding: 20px;
+}
+
+.studentImage{
+  display: flex;
+  flex: 1;
+  text-align: right;
+  padding: 10px;
+  height: 600px;
+  margin-left: 70%;
+  margin-top: -56%;
+}
+
+
+.showUserImage{
+  display: flex;
+  flex: 1;
+  text-align: right;
+  padding: 10px;
+  height: 600px;
+  margin-left: 70%;
+  margin-top: -120%;
+}
+
+
+
 header.mastheadStudent .page-heading,
 header.mastheadStudent .post-heading,
 header.mastheadStudent .site-heading {
@@ -11553,7 +11589,7 @@ header.mastheadStudent .site-heading .subheading {
   font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.1;
-  display: block;
+  display: flex;
   margin-top: 0.625rem;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11563,7 +11599,7 @@ header.mastheadStudent .post-heading h1, header.mastheadStudent .post-heading .h
 header.mastheadStudent .post-heading .meta,
 header.mastheadStudent .post-heading .subheading {
   line-height: 1.1;
-  display: block;
+  display: flex;
 }
 header.mastheadStudent .post-heading .subheading {
   font-size: 1.5rem;
@@ -11623,7 +11659,7 @@ header.mastheadStudent .site-heading .h1 {
 .caption {
   font-size: 0.875rem;
   font-style: italic;
-  display: block;
+  display: flex;
   margin: 0;
   padding: 0.625rem;
   text-align: center;

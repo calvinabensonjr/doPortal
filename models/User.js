@@ -12,12 +12,12 @@ const UserSchema = new mongoose.Schema({
   password: String,
   classes: [{type: ObjectId}],
   // name: {first: String, last: String},
-  img:
-    {
+  img: {
         data: Buffer,
         contentType: String
     }
 })
+
 
 
 // Password hash middleware.

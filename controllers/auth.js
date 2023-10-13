@@ -96,6 +96,9 @@ var path = require('path');
     }
     req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
   
+
+
+
     const user = new User({
       userName: req.body.userName,
       firstName: req.body.firstName,
@@ -106,15 +109,30 @@ var path = require('path');
       grade: req.body.grade,
       gender: req.body.gender,
       classes: [],
-      
+      img: {
+        data: fs.readFileSync(path.join(__dirname + '/../uploads/' + req.file.filename)),
+        // added "/../ to go up in the folders"
+        //uploads is NOT in the controllers folder where "__dirname" is
+        contentType: 'image/png'
+    }
       // classes: {Array: 0},
     })
 
+
+// image upload
+
+
+
+
+
+
+
+
+
+
+
     
-  //   img: {
-  //     data: fs.readFileSync(path.join(__dirname + '/../uploads/' + req.file.filename)),
-  //     contentType: 'image/png'
-  // }
+  
     
   
 

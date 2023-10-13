@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title><%= showuser.userName %>'s Profile</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -46,14 +46,16 @@
 
 
                             <body>
-   
+                                <section class="textItems">
                                 <h3>UserName: <%= showuser.userName %></h3>
                                 <h3>First Name: <%= showuser.firstName %></h3>
                                 <h3>Last Name: <%= showuser.lastName %></h3>
                                 <h3>Email: <%= showuser.email %></h3>
                                 <h3>Grade: <%= showuser.grade %></h3>
                                 <h3>UserType: <%= showuser.userType %></h3>
-                                <ul class="currClass">Classes: 
+
+                                <ul class="currClass"> 
+                                    <h4><%= showuser.firstName %>'s classes:</h4>
                                    <% for(let i = 0; i < clss.length; i++){ %>
                                    <li> Subject: <%= clss[i].name %>, </li> 
                                    <!-- <li> Department: <%= clss[i].department %>, </li> 
@@ -65,7 +67,7 @@
                                     <!-- Teacher is attached to usertype, in the UserSchema. -->
                                    <% } %>
                                    </ul>
-                            
+                                </section>
                             
                             
                             
@@ -75,6 +77,7 @@
 
                                 <!-- <h5>Classes</h5> -->
                                 <ul class="checkOffClass"> 
+                                    <h4>All Classes:</h4>
                                    <% for(let i = 0; i < allClasses.length; i++){
                                     const checked = showuser.classes.find(id => id.toString() === allClasses[i]._id.toString())
                                     %>
@@ -91,13 +94,17 @@
                                    </ul>
                             
                                   
-                                   <!-- <div>
-                                    <img src="data:image/<=showuser.img.contentType>;base64,
-                                         <=showuser.img.data.toString('base64')>">
-                                   </div> -->
+                                   <div>
+                                    <img class="showUserImage" src="data:<%=showuser.img.contentType%>;base64,
+                                    <%=showuser.img.data.toString('base64')%>">
+                                   </div> 
+
+                                   
+                                </div>
+                                   
                             
-                                        <!-- <h5> image.name </h5> -->
-                                        <!-- <h5><= showuser.img %></h5> -->
+                                        <!-- <h5> image.name </h5>
+                                       <h5><= showuser.img %></h5> -->
                                         <!-- change to the name of that corresponds with the user schema, and targets the image -->
                             
                                 </form>

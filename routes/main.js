@@ -8,7 +8,7 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 var multer = require('multer');
 
-//in charge if handling file uploads, often are images
+//in charge of handling file uploads, often are images
  
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Clean Blog - Start Bootstrap Theme</title>
+        <title><%= user.userName %>'s Profile</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -46,24 +46,45 @@
 
                             <body>
                                 
-                            
+                            <section class="textItems">
                                 <h3>UserName: <%= user.userName %></h3>
                                 <h3>First Name: <%= user.firstName %></h3>
                                 <h3>Last Name: <%= user.lastName %></h3>
                                 <h3>Email: <%= user.email %></h3>
                                 <h3>Grade: <%= user.grade %></h3>
-                                <!-- <h3>UserType: <%= user.userType %></h3> -->
                                 <h3>Classes: 
                                     <% for(let i = 0; i < clss.length; i++){ %>
                                         <ul class="currClass">
                                             <li>Subject: <%= clss[i].name %></li>
                                         </ul>
+                                   <% } %>
+                            </section>
+                                <!-- <% console.log(user,user.img)%> -->
+                                <div>
+                                <img class="studentImage" src="data:<%=user.img.contentType%>;base64,
+                                        <%=user.img.data.toString('base64')%>">
+                                </div>
+
+                                
+
+                                <div>
+                                    <h5><%= user.name %></h5>
+                         
+                                    <p><%= user.desc %></p>
+                                  </div>
+
+                                <!-- <h3>UserType: <%= user.userType %></h3> -->
+                                <!-- <h3>Classes: 
+                                    <% for(let i = 0; i < clss.length; i++){ %>
+                                        <ul class="currClass">
+                                            <li>Subject: <%= clss[i].name %></li>
+                                        </ul> -->
                                    <!-- <span> Subject: <%= clss[i].name %>, </span> 
                                    <span> Department: <%= clss[i].department %>, </span> 
                                    <span> Grade: <%= clss[i].grade %> | </span>  -->
                                    <!-- this doesn;t work for student profile -->
                                    <!-- schema issue? or variable creation needed in general.js? -->
-                                   <% } %>
+                                   <!-- <% } %> -->
                                    
                                    <!-- ColorLib -->
                                    <!-- looking for a template to hold the user's class and make it look more appealing -->

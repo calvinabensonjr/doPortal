@@ -113,6 +113,7 @@ module.exports = {
             const user = await User.findOne({_id: mongoose.Types.ObjectId(req.query.id)})
             console.log('found user', user)
             
+            // const studentImg = await getImage(user.img)
             const clss = await getClasses(user.classes)
             const allClasses = await Clss.find()
             console.log('found class', clss, 'using', user.classes[0])
@@ -156,7 +157,7 @@ module.exports = {
         // loop through all the keys in req.body and push each one, into the student
         //loop through all the classes, in req.body, push each one into the student, so that it shows up on their page
         //this is so that I can make the app do the work, rather than manually pair students with classes from MongoDB
-        res.send("ok")
+        res.send("Submission Successful")
     }
 
 }
