@@ -11547,7 +11547,15 @@ header.mastheadStudent:before {
   padding: 20px;
 }
 
-.studentImage{
+/* student welcome (ex. Hi, John!) */
+
+.userGreet{
+  text-align: left;
+  flex: 1;
+  padding: 20px;
+}
+
+/* .studentImage{
   display: flex;
   flex: 1;
   text-align: right;
@@ -11555,10 +11563,19 @@ header.mastheadStudent:before {
   height: 600px;
   margin-left: 70%;
   margin-top: -56%;
+} */
+
+.studentImage{
+  position: absolute;
+  top: -11%;
+  left: 58%;
+  text-align: right;
+  padding: 10px;
+  height: 600px;
 }
 
 
-.showUserImage{
+/* .showUserImage{
   display: flex;
   flex: 1;
   text-align: right;
@@ -11566,8 +11583,18 @@ header.mastheadStudent:before {
   height: 600px;
   margin-left: 70%;
   margin-top: -120%;
+} */
+
+.showUserImage{
+  position: absolute;
+  top: -11%;
+  left: 58%;
+  text-align: right;
+  padding: 10px;
+  height: 600px;
 }
 
+/* removed display, flex & margins */
 
 
 header.mastheadStudent .page-heading,

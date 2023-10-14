@@ -1,6 +1,7 @@
 # Introduction
 
-A simple student info app is built using the MVC Architecture, with authentication. To access the live site, go to https://doportal.cyclic.app/. For local manipulation, jump to the [run application](#to-run-application) instructions.
+What exactly is the DoPortal app, and what motivated its creation? The inspiration behind the inception of this application stemmed from a compelling necessity within a non-profit organization dedicated to facilitating students' access to higher education: the imperative transition to a paperless operation. Picture an archive reminiscent of a cluttered closet, filled with decades-old files and documentation. Witnessing my colleagues and superiors expending an exorbitant amount of effort on paper-based tasks year-round left me with a profound unease. What if there existed a more efficient, digital alternative, liberating them from the burdensome chore of lugging physical documents? By implementing an MVC architecture complete with authentication features, I devised a comprehensive solution for this challenge.
+ To access the live site, go to https://doportal.cyclic.app/. For local manipulation, jump to the [run application](#to-run-application) instructions.
 
 ---
 
