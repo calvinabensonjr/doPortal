@@ -59,7 +59,7 @@ On the second line type:
 3. Hit submit at the bottom of the form.
 
 `To access test admin:`
-1. Request login credentials via email
+1. Request login credentials via email: calvinbensonjr@gmail.com
 <!-- 1. Logout (if you haven’t logged out from previous user yet)
 2. click login,  enter: Username: johnb@gmail.com . Pass: johnjohnb
 3. View the all of the users, select the user you created.
