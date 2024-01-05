@@ -28,10 +28,7 @@
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/logout">Logout</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/post">Posts</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact">Contact</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/login">Login</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/signup">Signup</a></li> -->
+   
                     </ul>
                 </div>
             </div>
@@ -42,25 +39,21 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <!-- <h1>About Me</h1> -->
+                           
 
                             <!-- Hello admin! -->
     <h1><%= user.userName %>'s home</h1>
-    <!-- <h3><%= user.email %></h3> -->
-    <!-- <h3>Grade:<%= user.grade %></h3> -->
+   
     <h3>Users</h3>
     <ul>
+        <!-- allows you to view all of the users -->
         <% allUsers.forEach( user => { %>
                 <li class='user' data-id='<%=user._id%>'>
-                   <!-- <a href="/todos?id=<%=user._id%>"> <span ><%= user.email %></span> </a> -->
+                   
 
                    <!-- this path is bringing me to each individual user's page -->
                    <a class="showOneUser" href="/showoneuser?id=<%=user._id%>"> <span ><%= user.email %></span> </a>
 
-                   <!-- User Type -->
-
-                    <!-- <span > (<%= user.userType %>)</span> -->
-                    <!-- <span class='del'> Delete </span> -->
                 </li>
         <% }) %>    
         </ul>

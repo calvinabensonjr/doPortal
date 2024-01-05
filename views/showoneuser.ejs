@@ -29,9 +29,7 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/admin">Admin</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/logout">Logout</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/contact">Contact</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/login">Login</a></li> -->
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/signup">Signup</a></li> -->
+
                     </ul>
                 </div>
             </div>
@@ -42,7 +40,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <!-- <h1>About Me</h1> -->
+                            
 
 
                             <body>
@@ -54,17 +52,11 @@
                                 <h3>Grade: <%= showuser.grade %></h3>
                                 <h3>UserType: <%= showuser.userType %></h3>
 
+                                <!-- allows the admin to view all of the student’s classes -->
                                 <ul class="currClass"> 
                                     <h4><%= showuser.firstName %>'s classes:</h4>
                                    <% for(let i = 0; i < clss.length; i++){ %>
                                    <li> Subject: <%= clss[i].name %>, </li> 
-                                   <!-- <li> Department: <%= clss[i].department %>, </li> 
-                                   <li> Grade: <%= clss[i].grade %> | </li> 
-                                   <li> Teacher: <%= clss[i].teacherName %> | </li> -->
-                                    <!--Do I need a teacherSchema for this? ^  -->
-                                    <!-- or to convert the objectId into a string? -->
-                                    <!-- Or create a separate loop?   -->
-                                    <!-- Teacher is attached to usertype, in the UserSchema. -->
                                    <% } %>
                                    </ul>
                                 </section>
@@ -75,7 +67,8 @@
                                    <!-- checkboxes -->
                             <form action="/addClasses" method="POST" class="" novalidate>
 
-                                <!-- <h5>Classes</h5> -->
+
+                                <!-- allows admin to add and remove classes from a student user -->
                                 <ul class="checkOffClass"> 
                                     <h4>All Classes:</h4>
                                    <% for(let i = 0; i < allClasses.length; i++){
@@ -83,11 +76,7 @@
                                     %>
                                    <input type="checkbox" <%=  checked ? 'checked' : '' %>  name="<%= allClasses[i]._id %>"><li> Subject: <%= allClasses[i].name %>, </li> 
                             
-                                   <!-- next step, to be able to update class, without having to remove the current classes and re-add them -->
-                            
-                                   <!-- <li> Department: <%= allClasses[i].department %>, </li> 
-                                   <li> Grade: <%= allClasses[i].grade %> | </li> 
-                                   <li> Teacher: <%= allClasses[i].teacherName %> | </li> -->
+                                 
                                    <% } %>
                                    <input type="hidden" name="studentId" value="<%=showuser._id %>">
                                    <input type="submit"> Update Classes </input>
@@ -102,21 +91,9 @@
                                 </div>
                                    
                             
-                                        <!-- <h5> image.name </h5>
-                                       <h5><= showuser.img %></h5> -->
-                                        <!-- change to the name of that corresponds with the user schema, and targets the image -->
                             
                                 </form>
-                               <!-- Need to move up. So that it's directly across,   -->
-                               <!-- from the cloned classes above -->
-                               <!-- there's a bug with displaying the image src, something happened with schema, or maybe the correct text wasn't saved properly. -->
-                            
-                            
-                            
-                            
-                                <!-- <a href="/logout">Logout</a>
-                                <a href="/admin">Admin</a>
-                                <a href="/">Home</a> -->
+                             
                                 
                             
                                 <script src="js/main.js"></script>

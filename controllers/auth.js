@@ -97,7 +97,7 @@ var path = require('path');
     req.body.email = validator.normalizeEmail(req.body.email, { gmail_remove_dots: false })
   
 
-
+// this allows the data collection in MongoDB to show on the client side
 
     const user = new User({
       userName: req.body.userName,
@@ -127,42 +127,7 @@ var path = require('path');
 
 
 
-
-
-
-
-    
-  
-    
-  
-
-    // const classitems = new classitems({
-    //   name: req.body.name,
-    //   department: req.body.department,
-    //   grade: req.body.grade,
-    //   teacher: []
-      
-    // })
-
-    //db collection
-
-    // const classItems = async db.collection('classes').insertMany([
-    //   {
-    //     item: 'journal',
-    //     qty: 25,
-    //     tags: ['blank', 'red'],
-    //     dim_cm: [14, 21]
-    //   }
-      
-    // ]);
-
-
-
-
-
-
-
-
+// determines what the user has access to according to their userType
 
 
     User.findOne({$or: [
