@@ -5,7 +5,7 @@ What exactly is the DoPortal app, and what motivated its creation? The inspirati
 
 ---
 
-![home page](image/indexDoPortal.png)
+![home page](image/newIndex.png)
 <!-- ![login page](image/doPortalLogin.png) -->
 
 
